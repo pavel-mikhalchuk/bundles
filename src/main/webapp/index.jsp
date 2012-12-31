@@ -1,3 +1,4 @@
+<%@page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -5,9 +6,10 @@
     <title>Java Development Environment Bundles</title>
     <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="js/serializeObject.js"></script>
+    <script type="text/javascript" src="js/download.js"></script>
     <script type="text/javascript">
         function getBundle() {
-            JSON.stringify($('#bundle').serializeObject());
+            $.download('bundle/get', 'bundle=' + encodeURI(JSON.stringify($('#bundle').serializeObject())));
         }
     </script>
 <body>

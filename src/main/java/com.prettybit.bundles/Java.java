@@ -7,29 +7,29 @@ import org.apache.commons.lang.builder.ToStringStyle;
 /**
  * @author Pavel Mikhalchuk
  */
-public class Bundle {
+public class Java {
 
-    private Java java;
+    private String version;
 
-    public Bundle() {
+    public Java() {
     }
 
-    public Bundle(Java java) {
-        this.java = java;
+    public Java(String version) {
+        this.version = version;
     }
 
-    public Java getJava() {
-        return java;
+    public String getVersion() {
+        return version;
     }
 
-    public void setJava(Java java) {
-        this.java = java;
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null || !(obj instanceof Bundle)) return false;
-        if (!ObjectUtils.equals(java, ((Bundle) obj).java)) return false;
+        if (obj == null || !(obj instanceof Java)) return false;
+        if (!ObjectUtils.equals(this.version, ((Java) obj).version)) return false;
         return true;
     }
 
