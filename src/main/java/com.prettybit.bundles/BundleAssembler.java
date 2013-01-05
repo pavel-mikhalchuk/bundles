@@ -1,5 +1,7 @@
 package com.prettybit.bundles;
 
+import com.prettybit.bundles.entity.Bundle;
+
 import java.io.File;
 
 /**

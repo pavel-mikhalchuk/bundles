@@ -32,5 +32,10 @@
 
 <input id="click" type="button" value="Get Bundle!" onclick="getBundle();"/>
 
+<form action="bundle/get" method="POST">
+    <input name="bundle" type="text" value="@$@#$@#$@#$@#$"/>
+    <input type="submit" value="SDFSDFSDF"/>
+</form>
+
 </body>
 </html>

@@ -1,8 +1,7 @@
 package com.prettybit.bundles.web;
 
 import com.prettybit.bundles.BundleAssembler;
-import com.prettybit.bundles.BundleParser;
-import org.glassfish.hk2.api.ServiceLocator;
+import com.prettybit.bundles.entity.Bundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,8 +11,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 /**
  * @author Pavel Mikhalchuk
@@ -26,14 +23,10 @@ public class BundleApi {
     @Inject
     private BundleAssembler assembler;
 
-    @Inject
-    private ServiceLocator locator;
-
     @POST
     @Path("get")
-    public Response get(@FormParam("bundle") String query) throws UnsupportedEncodingException {
-        File bundle = assembler.assemble(BundleParser.parse(URLDecoder.decode(query, "UTF-8")));
-        return respond(bundle.getAbsoluteFile());
+    public Response get(@FormParam("bundle") Bundle bundle) {
+        return respond(assembler.assemble(bundle));
     }
 
     private Response respond(File bundle) {

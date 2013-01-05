@@ -1,5 +1,8 @@
-package com.prettybit.bundles;
+package com.prettybit.bundles.entity.web;
 
+import com.prettybit.bundles.entity.Bundle;
+import com.prettybit.bundles.entity.Java;
+import com.prettybit.bundles.web.BundleParser;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,4 +1,4 @@
-package com.prettybit.bundles;
+package com.prettybit.bundles.entity;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.builder.ToStringBuilder;

@@ -1,4 +1,4 @@
-package com.prettybit.bundles;
+package com.prettybit.bundles.entity;
 
 import org.junit.Test;
 
@@ -7,11 +7,11 @@ import static org.junit.Assert.assertEquals;
 /**
  * @author Pavel Mikhalchuk
  */
-public class BundleTest {
+public class JavaTest {
 
     @Test
     public void testEquals() {
-        assertEquals(new Bundle(new Java("1.7")), new Bundle(new Java("1.7")));
+        assertEquals(new Java("1.7"), new Java("1.7"));
     }
 
 }

@@ -1,5 +1,6 @@
 package com.prettybit.bundles;
 
+import com.prettybit.bundles.entity.Bundle;
 import org.apache.commons.lang.NotImplementedException;
 
 import java.io.File;
