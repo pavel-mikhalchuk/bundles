@@ -5,7 +5,6 @@ import com.prettybit.bundles.entity.Bundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.inject.Inject;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -20,7 +19,7 @@ public class BundleApi {
 
     private static final Logger log = LoggerFactory.getLogger(BundleApi.class);
 
-    @Inject
+    @OSBundleAssembler
     private BundleAssembler assembler;
 
     @POST
