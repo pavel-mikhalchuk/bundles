@@ -5,6 +5,7 @@ import com.prettybit.bundles.entity.Java;
 import com.prettybit.bundles.web.BundleParser;
 import org.junit.Test;
 
+import static com.prettybit.bundles.entity.Java.Version.JSE_7_U10_MAC_OS_X_68;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -14,8 +15,8 @@ public class BundleParserTest {
 
     @Test
     public void testParse() {
-        assertEquals(new Bundle(new Java("1.6")), BundleParser.parse("{\"java\":{\"version\":\"1.6\"}}"));
-        assertEquals(new Bundle(new Java("1.7")), BundleParser.parse("{\"java\":{\"version\":\"1.7\"}}"));
+        assertEquals(new Bundle(new Java(JSE_7_U10_MAC_OS_X_68)),
+                BundleParser.parse("{\"java\":{\"version\":\"JSE_7_U10_MAC_OS_X_68\"}}"));
     }
 
 }

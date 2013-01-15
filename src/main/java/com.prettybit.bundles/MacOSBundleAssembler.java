@@ -1,20 +1,23 @@
 package com.prettybit.bundles;
 
 import com.prettybit.bundles.entity.Bundle;
-import org.apache.commons.lang.NotImplementedException;
+import com.prettybit.bundles.entity.Java;
 
-import javax.inject.Named;
 import java.io.File;
+import java.util.Map;
+
+import static com.google.common.collect.Maps.toMap;
 
 /**
  * @author Pavel Mikhalchuk
  */
-@Named("MacOS")
 public class MacOSBundleAssembler implements BundleAssembler {
+
+    private static Map<Java.Version, String> java = toMap(Java.Version.list(), Java.Version.getFileFunction());
 
     @Override
     public File assemble(Bundle bundle) {
-        throw new NotImplementedException();
+        return new File(java.get(bundle.getJava().getVersion()));
     }
 
 }

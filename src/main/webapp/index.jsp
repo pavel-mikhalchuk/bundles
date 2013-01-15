@@ -1,5 +1,7 @@
+<%@ page import="com.prettybit.bundles.entity.Java" %>
 <%@page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="java_versions" value="<%=Java.Version.values()%>"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,16 +16,16 @@
     </script>
 <body>
 
-<div id="bundle" style="width: 140px;">
+<div id="bundle" style="width: 250px;">
 
     <fieldset>
         <legend>Java</legend>
         <label>
             Version:
-            <select name="java[version]" style="width: 50px;">
-                <option value="1.4">1.4</option>
-                <option value="1.5">1.5</option>
-                <option value="1.6">1.6</option>
+            <select name="java[version]">
+                <c:forEach items="${java_versions}" var="version">
+                    <option value="${version}">${version.display}</option>
+                </c:forEach>
             </select>
         </label>
     </fieldset>

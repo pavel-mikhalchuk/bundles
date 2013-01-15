@@ -30,7 +30,7 @@ public class BundleApi {
 
     private Response respond(File bundle) {
         return Response.ok()
-                .header("Content-Disposition", "attachment; filename=\"" + bundle.getAbsolutePath() + "\"")
+                .header("Content-Disposition", "attachment; filename=\"" + bundle.getName() + "\"")
                 .entity(bundle)
                 .build();
     }
