@@ -1,7 +1,9 @@
 <%@ page import="com.prettybit.bundles.entity.Java" %>
+<%@ page import="com.prettybit.bundles.entity.Maven" %>
 <%@page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="java_versions" value="<%=Java.Version.values()%>"/>
+<c:set var="maven_versions" value="<%=Maven.Version.values()%>"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +26,18 @@
             Version:
             <select name="java[version]">
                 <c:forEach items="${java_versions}" var="version">
+                    <option value="${version}">${version.display}</option>
+                </c:forEach>
+            </select>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Maven</legend>
+        <label>
+            Version:
+            <select name="maven[version]">
+                <c:forEach items="${maven_versions}" var="version">
                     <option value="${version}">${version.display}</option>
                 </c:forEach>
             </select>

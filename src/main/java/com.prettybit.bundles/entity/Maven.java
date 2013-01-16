@@ -12,14 +12,14 @@ import static com.google.common.collect.Lists.newArrayList;
 /**
  * @author Pavel Mikhalchuk
  */
-public class Java {
+public class Maven {
 
     private Version version;
 
-    public Java() {
+    public Maven() {
     }
 
-    public Java(Version version) {
+    public Maven(Version version) {
         this.version = version;
     }
 
@@ -33,8 +33,8 @@ public class Java {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null || !(obj instanceof Java)) return false;
-        if (!ObjectUtils.equals(this.version, ((Java) obj).version)) return false;
+        if (obj == null || !(obj instanceof Maven)) return false;
+        if (!ObjectUtils.equals(this.version, ((Maven) obj).version)) return false;
         return true;
     }
 
@@ -45,8 +45,7 @@ public class Java {
 
     public enum Version {
 
-        JSE_7_U9_MAC_OS_X_68("JDK 7u9 MacOS x64", "/java/7/u9/jdk-7u9-macosx-x64.dmg"),
-        JSE_7_U10_MAC_OS_X_68("JDK 7u10 MacOS x64", "/java/7/u10/jdk-7u10-macosx-x64.dmg");
+        MVN_2_0_10("Maven 2.0.10", "/maven/2/apache-maven-2.0.10-bin.zip");
 
         private static final String BASE = "/Users/pacan/bundles";
 

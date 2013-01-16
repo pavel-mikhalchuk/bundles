@@ -10,6 +10,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
 public class Bundle {
 
     private Java java;
+    private Maven maven;
 
     public Bundle() {
     }
@@ -18,12 +19,29 @@ public class Bundle {
         this.java = java;
     }
 
+    public Bundle(Maven maven) {
+        this.maven = maven;
+    }
+
+    public Bundle(Java java, Maven maven) {
+        this.java = java;
+        this.maven = maven;
+    }
+
     public Java getJava() {
         return java;
     }
 
     public void setJava(Java java) {
         this.java = java;
+    }
+
+    public Maven getMaven() {
+        return maven;
+    }
+
+    public void setMaven(Maven maven) {
+        this.maven = maven;
     }
 
     @Override
